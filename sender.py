@@ -151,9 +151,9 @@ class Polargraph():
             'tim_ran': time_ran,
             'time_per_command': time_per_command,
             'time_left': time_left ,
-            'hours_left': int(time_left.seconds / 3600),
-            'minutes_left': int((time_left.seconds % 3600) / 60),
-            'seconds_left': int(time_left.seconds % 60),
+            'hours_left': int(time_left.seconds / 3600) if time_left else 0,
+            'minutes_left': int((time_left.seconds % 3600) / 60) if time_left else 0,
+            'seconds_left': int(time_left.seconds % 60) if time_left else 0,
         }
 
     def write_line(self):
