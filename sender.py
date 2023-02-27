@@ -142,7 +142,7 @@ class Polargraph():
                 time_projected = self.total_lines * time_per_command
                 time_left = timedelta(time_projected - time_ran) if self.file_position < self.total_lines else timedelta(0)
                 
-            self.ready = True
+        self.ready = True
         
         
         return {
