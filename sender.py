@@ -128,6 +128,12 @@ class Polargraph():
             l = self.serial_port.readline().decode('ascii')
             l.strip()
         
+        time_ran = 0
+        time_per_command = 0
+        time_projected = 0
+        time_left = 0
+
+        
         if l.startswith("READY"):
             # if it's changing from not ready to ready, then it's just finished a command
             if not self.ready:
